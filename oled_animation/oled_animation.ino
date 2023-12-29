@@ -30,7 +30,11 @@ int frame = 0;
 void loop() {
   display.clearDisplay();
   display.drawXBitmap(0, 0, IRT_LOGO, IRTLOGO_WIDTH, IRTLOGO_HEIGHT, 1);
-  display.drawBitmap(48, 32, frames[frame], FRAME_WIDTH, FRAME_HEIGHT, 1);
+  display.drawBitmap(0, 33, frames[frame], FRAME_WIDTH, FRAME_HEIGHT, 1);
+  display.setTextSize(1);
+  display.setTextColor(WHITE);
+  display.setCursor(40,45);
+  display.println("Lenart Istvan");
   display.display();
   frame = (frame + 1) % FRAME_COUNT;
   delay(FRAME_DELAY);
