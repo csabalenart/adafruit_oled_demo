@@ -32,6 +32,7 @@ void loop() {
   display.drawXBitmap(0, 0, IRT_LOGO, IRTLOGO_WIDTH, IRTLOGO_HEIGHT, 1);
   display.drawBitmap(0, 33, frames[frame], FRAME_WIDTH, FRAME_HEIGHT, 1);
   display.setTextSize(1);
+  display.setTextWrap(false);
   display.setTextColor(WHITE);
   display.setCursor(40,45);
   display.println("Lenart Istvan");
