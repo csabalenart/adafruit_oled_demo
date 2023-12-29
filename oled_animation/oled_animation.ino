@@ -24,7 +24,7 @@ void setup() {
   }else{
     Serial.println("Nem sikerült oledezni");
   }
-
+  display.cp437(true);
 }
 int frame = 0;
 void loop() {
@@ -34,7 +34,7 @@ void loop() {
   display.setTextSize(1);
   display.setTextWrap(false);
   display.setTextColor(WHITE);
-  display.setCursor(40,45);
+  display.setCursor(37,45);
   display.println("Lenart Istvan");
   display.display();
   frame = (frame + 1) % FRAME_COUNT;
